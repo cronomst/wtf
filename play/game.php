@@ -65,7 +65,7 @@ if (isset($_GET['gid'])) {
         // *****************************
         // Check if player is already in the room
         if ($pid != null && $wtfGameState->isPlayerInRoom($pid, $gid)) {
-            displayGamePage();
+            displayGamePage($game);
             exit;
 
             // Check if room is full.
@@ -89,7 +89,7 @@ if (isset($_GET['gid'])) {
             $wtfChat->addChat($gid, "<b>$escapedPlayerName has joined the game.</b>", $pname);
         }
         // Display the game
-        displayGamePage();
+        displayGamePage($game);
     } else {
         // Go to room selection page
         header("Location: ./");
@@ -146,8 +146,7 @@ if (isset($_GET['gid'])) {
     }
 }
 
-function displayGamePage() {
-    global $game;
+function displayGamePage($game) {
 
     // Set sound settings (these are set by the Javascript in wtf.js whenever the user clicks the sound toggle button).
     if (isset($_COOKIE['wtfsetting_sound']) && $_COOKIE['wtfsetting_sound'] != 0) {
@@ -258,12 +257,12 @@ function displayGamePage() {
             </form>
             <script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>
             <script type="text/javascript">
-    <?php
-    if ($sound_enabled == 'true')
-        echo "var sound_applet_loaded = true;\n initSound()\n";
-    else
-        echo "var sound_applet_loaded = false;\n";
-    ?>
+                <?php if ($sound_enabled == 'true') : ?>
+                var sound_applet_loaded = true;
+                initSound();
+                <?php else : ?>
+                var sound_applet_loaded = false;
+                <?php endif ?>
             </script>
         </body>
     </html>
