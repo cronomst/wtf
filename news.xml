@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<news>
+    <article>
+        <date>April 2, 2013</date>
+        <title>Player list bug fix</title>
+        <body><![CDATA[
+        <p>
+            I have fixed a bug that was showing names in the player list
+            incorrectly when they contained certain characters.  I have
+            also made a pretty major overhaul of the code that should be
+            transparent to you, but if you come across any weird errors that
+            weren't there before, please let me know.
+        </p>
+        ]]>
+        </body>
+    </article>
+    <article>
+        <date>January 20, 2013</date>
+        <title>Player cap added</title>
+        <body><![CDATA[
+        <p>
+            I have added a player cap of 30 people until I can come up with a way to
+			reduce the resource usage that a high number of players has been
+			generating.  Hopefully this will prevent the game from being
+			disabled in the meantime.
+        </p>
+        ]]>
+        </body>
+    </article>
+    <article>
+        <date>January 20, 2013</date>
+        <title>Oops!</title>
+        <body><![CDATA[
+        <p>
+            It looks like my host disabled parts of the site due to high resource
+			usage.  Unfortunately, that part of the site is required to play the
+			game.  I am working with my web host to get the resolved so I can
+			get things up and running again.
+        </p>
+        ]]>
+        </body>
+    </article>
+    <article>
+        <date>March 11, 2012</date>
+        <title>Quiet, you!</title>
+        <body><![CDATA[
+        <p>
+            You can now mute people in chat.  To do so, simply click on the player's
+            name on the score list.  Their name will turn black and all their chat
+            messages will vanish.  Clicking the name again will undo this.
+        </p>
+        ]]>
+        </body>
+    </article>
+    <article>
+        <date>December 31, 2011</date>
+        <title>Redirection problem fixed</title>
+        <body><![CDATA[
+		<p>I found that some devices that do not have Java capabilities were
+			getting auto-redirected to Java's website whenever they tried to load the game.  I have made
+			a change that should prevent this from happening.
+		</p>
+		<p>Also, the images to the right should once again display correctly in Internet Explorer</p>
+		]]>
+        </body>
+    </article>
+    <article>
+        <date>December 21, 2011</date>
+        <title>Notification sound added</title>
+        <body><![CDATA[
+		<p>
+			Sound has been added to the game!  Well, just one sound, really.
+			A poorly recorded, synthesized chime will now announce the beginning of new rounds.  This
+			is disabled by default and can be toggled on and off by clicking the speaker icon in the
+			top bar.  To be able to hear the sound, you will need the latest version of the
+			<a href="http://java.com">Java plugin</a> installed in your browser.
+		</p>
+		<p>
+			I am honestly not especially happy with the sound I have gone with, but I chose it
+			because I couldn't get my Mario Paint composition to record decently (maybe you should
+			be thankful for that, actually).  I am open to suggestions for a better sound.
+		</p>
+		<p>
+			In other news, it seems I broke the "Player Caption" image on the right for those of
+			you using Internet Explorer.  If you're using IE, you should feel an overwhelming sense
+			of shame.  Even so, I will try to find a solution for you poor souls shortly.
+		</p>
+		]]>
+        </body>
+    </article>
+</news>

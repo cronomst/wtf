@@ -1,0 +1,158 @@
+body {
+    background-color: #d0d0d0;
+    padding: 0;
+    margin: 0;
+}
+body.fb {
+    background-color: white;
+}
+h3 {
+    font-family: sans-serif;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+h4 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-family: sans-serif;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#container {
+    width: 748px;
+    padding: 0px;
+
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    background-color: white;
+    border: 1px solid #909090;
+    border-top: 0;
+}
+.fb #container {
+    border: 0;
+}
+
+/* Header */
+#header {
+    position: relative;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+
+    background-image: url("./images/background.gif");
+    border: 1px solid #909090;
+}
+#logo {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: xx-large;
+    color: white;
+    text-decoration: none;
+}
+#logo * { border: 0; }
+
+#player_count {
+    font-family: sans-serif;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: white;
+}
+
+
+/* Main content */
+
+#main {
+    position: relative;
+    padding: 10px;
+    padding-top: 0;
+}
+
+#play_now {
+    margin-right: 260px;
+    background-image: url("./play/orange.png");
+    background-repeat: repeat-x;
+    background-color: #ffe400;
+    border: 1px solid #ff8a00;
+    padding: 5px;
+}
+
+#play_now #login_error {
+    color: red;
+    font-weight: bold;
+}
+
+#game_desc, #recent_news {
+    margin-top: 1em;
+    margin-right: 260px;
+}
+
+/* Side bar */
+#sidebar {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    width: 250px;
+}
+#sidebar #add_photos {
+    /*border: 2px outset #f0f0f0;*/
+    /*background-color: #d0d0d0;*/
+    background-image: url("./play/orange.png");
+    background-repeat: repeat-x;
+    background-color: #ffe400;
+    border: 1px outset #ff8a00;
+    margin-top: 5px;
+    padding: 1ex;
+}
+#sidebar #add_photos h3 {
+    margin: 0;
+    padding-bottom: 0;
+}
+/* Feature caption */
+#featured {
+    text-align: center;
+    border: 1px solid black;
+}
+#featured img {
+    border: 1px solid black;
+}
+#featured p {
+    font-style: italic;
+    margin-top: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/* News */
+#recent_news h3 {
+    margin-bottom: 10px;
+}
+#recent_news p {
+    margin-top: 5px;
+}
+/*
+#recent_news {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #a0a0a0;
+        border: 1px solid black;
+}
+*/
+
+
+/* Footer */
+#footer {
+    margin: 0 auto;
+    font-size: x-small;
+    width: 750px;
+    color: #505050;
+    text-align: center;
+}

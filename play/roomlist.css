@@ -1,0 +1,145 @@
+html {
+    /* background-color: #d0d0d0; */
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #d0d0d0;
+}
+body.fb {
+    background-color: white;
+}
+
+#main {
+    width: 748px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+
+    border: 1px solid #909090;
+    border-top: 0;
+    background-color: white;
+
+}
+.fb #main {
+    width: auto;
+    margin: 0;
+    border: 0;
+}
+
+label {
+    font-family: sans-serif;
+}
+h1 {
+    font-family: sans-serif;
+}
+
+legend {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+fieldset {
+    margin-bottom: 1em;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#header {
+    position: relative;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+
+    background-image: url("background.gif");
+    border: 1px solid #909090;
+}
+#logo {
+    display: inline-block;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: xx-large;
+    text-decoration: none;
+    color: white;
+}
+#logo * { border: 0; }
+
+#create_game {
+
+}
+#create_game #gname {
+    width: 300px;
+    margin-right: 3em;
+}
+
+#room_list {
+    list-style: none;
+    padding: 0;
+}
+#room_list img {
+    vertical-align: middle;
+    border: 0;
+}
+#room_list .roomname {
+    font-weight: bold;
+}
+#room_list .timelimit {
+    position: absolute;
+    right: 0px;
+    padding: 8px;
+    font-weight: bold;
+    /*font-size:smaller;
+    margin-left: 50px;*/
+}
+#room_list .timelimit:before {
+    content: "Caption time limit: ";
+    font-weight: normal;
+}
+
+li {
+    position: relative;
+    background-image: url("orange.png");
+    background-repeat: repeat-x;
+    background-color: #ffe400;
+    margin-bottom: 5px;
+    border: 1px solid #af9400;
+    font-family: sans-serif;
+    padding: 2px;
+    display: block;
+}
+li.clean {
+    color: #008000;
+    background-color: #f9f9f9;
+    background-image: url("silver.png");
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    border: 1px solid #c0c0c0;
+}
+li.use_pw:after {
+    color: red;
+    content: " - Password"
+}
+li.full {
+    color: #f00000;
+    background-color: white;
+    background-image: none;
+    border: 1px solid #d0d0d0;
+    padding: 5px;
+}
+
+#password_dialog {
+    background-color: white;
+    background-image: url("lightblue.png");
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    /*height: 100px;*/
+    margin-left: -100px;
+    margin-top: -50px;
+    border: 3px solid #5050ff;
+    padding: 10px;
+}
+#password_dialog #pwd_password {
+    width: 190px;
+}
