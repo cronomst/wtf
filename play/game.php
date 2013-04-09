@@ -10,8 +10,6 @@ $wtfChat = Chat::getInstance();
 define("MAX_PLAYERS", $wtfConfig->get('game.max_players')); // Max players per room
 define("MAX_TOTAL_PLAYERS", $wtfConfig->get('game.max_total_players'));
 
-
-//************************************
 if (isset($_SESSION['player_id']))
     $pid = $_SESSION['player_id'];
 else
@@ -23,7 +21,6 @@ if (isset($_SESSION['player_name'])) {
     header("Location: login.php");
     exit;
 }
-//*************************************
 
 if (isset($_GET['gid'])) {
     $gid = $_GET['gid'];
@@ -37,32 +34,12 @@ if (isset($_GET['gid'])) {
         else
             $p = $wtfGameState->getPlayer($pid); // Get the player with this pid.  If successfully, the player is already in the table.
 
-        /* If player is already in the room
-          display game
-          exit
-          else if room is full
-          display room full error
-          exit
-          else if player does not exist
-          create player
-          join room
-          display game
-
-         */
-
-        // ******* PASSWORD **********
         if ($game['password'] !== null &&
                 (isset($_SESSION['password']) == false || $_SESSION['password'] != $game['password'])) {
             header("Location: password.php?gid=$gid");
             exit;
         }
-        /*
-          if the room has a password and (the sessions "password" field is not set || the session password does not match)
-          the password is wrong or not yet entered.  Display password input
-          else
-          there is no password, or the password is correct, so continue
-         */
-        // *****************************
+
         // Check if player is already in the room
         if ($pid != null && $wtfGameState->isPlayerInRoom($pid, $gid)) {
             displayGamePage($game);
@@ -109,10 +86,7 @@ if (isset($_GET['gid'])) {
         if (isset($_POST['clean']) && $_POST['clean'] != 0) {
             $is_clean = 1;
         }
-        /*
-          store password in sql table
-          store password for this player's session.  since they created the room, they don't need to enter the password.
-         */
+        
         $password = null; // Default to null
 
         if (isset($_POST['use_password']) && $_POST['use_password'] != 0) {
