@@ -43,7 +43,7 @@ class Flickr
      */
     protected function _getGroupURL($group_id)
     {
-        $url = 'http://api.flickr.com/services/rest/?'
+        $url = 'https://api.flickr.com/services/rest/?'
                 . 'method=flickr.photos.search'
                 . '&api_key=' . $this->_apiKey
                 . '&group_id=' . $group_id;
@@ -75,6 +75,7 @@ class Flickr
         try {
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             $xml = curl_exec($ch);
             $doc = new SimpleXMLElement($xml);
             $total = $doc->photos[0]['total'];
@@ -131,6 +132,7 @@ class Flickr
     {
         $ch = curl_init($url . "&per_page=1&page=$num");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $xml = curl_exec($ch);
 
         $photos = $this->_getPhotos($xml);
