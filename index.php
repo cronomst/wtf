@@ -133,7 +133,7 @@ if (isset($_SESSION['login_error'])) {
                 </div>
             </div>
             <div id="footer">
-                Copyright &copy; 2013 Kenneth Shook.  All images are property of their respective owners.
+                Copyright &copy; 2011-2015 Kenneth Shook.  All images are property of their respective owners.
             </div>
         </div>
     </body>

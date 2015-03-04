@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <news>
+	<article>
+        <date>March 4, 2015</date>
+        <title>Rise from your grave!</title>
+        <body><![CDATA[
+        <p>
+            So, apparently the site had been down since November, and I was
+			completely unaware. Perhaps I should be paying a little more
+			attention. Nah...
+        </p>
+        ]]>
+        </body>
+    </article>
     <article>
         <date>April 2, 2013</date>
         <title>Player list bug fix</title>
