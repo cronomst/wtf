@@ -22,7 +22,7 @@ function bootstrap() {
     /*
      * Initalize configuration from config.ini based on the environment
      */
-    $config = parse_ini_file(dirname(__FILE__) . '/_private/config.ini', true);
+    $config = parse_ini_file(dirname(__FILE__) . '/config/config.ini', true);
     $environment = getenv('WTF_ENV') ? getenv('WTF_ENV') : 'production';
 
     Configuration::createConfig($config, $environment);

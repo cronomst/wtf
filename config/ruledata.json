@@ -1,0 +1,14 @@
+[
+    {"rule" : "none"},
+    {
+        "rule" : "Write a caption that fits the initialism: %s",
+        "type" : "acronym"
+    },
+    {"rule" : "Write a caption in the form of an advertising slogan."},
+    {"rule" : "Write a caption in the form of a trashy tabloid headline."},
+    {"rule" : "Write a caption in the form of a tiny, rhyming poem."},
+    {"rule" : "Write a caption in the form of a Public Service Announcement."},
+    {"rule" : "Write a caption that sounds like a film, book, or game title."},
+    {"rule" : "Write a (probably) fake web address where this photo might be found."},
+    {"rule" : "Write something a Miami detective might say just before putting on his sunglasses. (YEEAAHH!)"}
+]

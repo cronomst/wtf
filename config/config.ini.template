@@ -1,0 +1,30 @@
+;<?php exit(0);
+;
+; WTF configuration
+[production]
+;Database
+db.host=localhost
+db.name=dbname
+db.username=dbuser
+db.password=dbpass
+;Game settings
+game.max_total_players=30 ; Max number of players in the entire game
+game.min_players=3
+game.max_players=10 ; Max number of players per room
+game.total_rounds=7
+game.time.pregame=5000
+game.time.intro=7000
+game.time.final_caption_extra=15000 ; Amount of extra time given during the final round
+game.time.wait=3000 ; The delay between states requiring player input to allow for network latency when players send data at the last moment.
+game.time.vote=35000
+game.time.results=15000
+game.time.gameover=15000
+game.time.refresh=30000 ; Max amount of time to go between state checks
+;Featured caption settings
+featured.votes_required=5
+;Rules
+rules.file=config/ruledata.json
+;Flickr
+flickr.api_key=apikey
+flickr.wtf_group_id=groupid1
+flickr.ct_group_id=groupid2

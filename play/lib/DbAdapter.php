@@ -54,7 +54,8 @@ class DbAdapter
         
         // Using non-OO version of mysqli_connect_error since the OO version is
         // supposedly broken with my PHP version.
-        if (mysqli_connect_error()) {
+        if ($mysqli->connect_error) {
+			error_log($mysqli->connect_error);
             $this->_displayDBError();
             exit;
         }
