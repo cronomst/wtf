@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <news>
-	<article>
+    <article>
+        <date>May 31, 2015</date>
+        <title>Flickr images temporarily disabled</title>
+        <body><![CDATA[
+        <p>
+            Several people have reported problems with repeating images and I
+            suspect it has something to do with the way I'm attempting to
+            obtain random images from Flickr. I've pulled the Flickr images
+            from the pool until I can resolve this. You still have around 650
+            "classic" Words That Follow images to play with in the meantime.
+        </p>
+        ]]>
+        </body>
+    </article>
+    <article>
         <date>March 4, 2015</date>
         <title>Rise from your grave!</title>
         <body><![CDATA[
         <p>
             So, apparently the site had been down since November, and I was
-			completely unaware. Perhaps I should be paying a little more
-			attention. Nah...
+            completely unaware. Perhaps I should be paying a little more
+            attention. Nah...
         </p>
         ]]>
         </body>
