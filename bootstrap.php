@@ -12,9 +12,9 @@ function bootstrap() {
      */
     $includePath = get_include_path();
     $includePath .= PATH_SEPARATOR . dirname(__FILE__)
-            . PATH_SEPARATOR . dirname(__FILE__) . $ds . '/play'
-            . PATH_SEPARATOR . dirname(__FILE__) . $ds . '/play/lib'
-            . PATH_SEPARATOR . dirname(__FILE__) . $ds . '/play/lib/Models';
+            . PATH_SEPARATOR . dirname(__FILE__) . '/play'
+            . PATH_SEPARATOR . dirname(__FILE__) . '/play/lib'
+            . PATH_SEPARATOR . dirname(__FILE__) . '/play/lib/Models';
             
     set_include_path($includePath);
     spl_autoload_register('_autoload');
