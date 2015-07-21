@@ -21,12 +21,7 @@ class RandomImage {
         // Get Flicker image count
         $flickr = self::getFlickrInstance();
         
-        /*
-         * Temporarily remove flickr images until I can find a better
-         * way to randomize them without so many repeats.
-         */
-        //$flickr_total = $flickr->getPhotoTotal();
-        $flickr_total = 0;
+        $flickr_total = $flickr->getPhotoTotal();
 
         // If we happen to pick the filename specified in $excluding, pick again.
         do {

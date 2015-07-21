@@ -56,9 +56,9 @@ class Flickr
      */
     public function getPhotoTotal()
     {
-        $this->_wtfTotal = $this->_getPhotoTotalFrom($this->_wtfUrl);
+        $this->_wtfTotal = 0; //$this->_getPhotoTotalFrom($this->_wtfUrl);
         $this->_ctTotal = $this->_getPhotoTotalFrom($this->_ctUrl);
-
+        
         return $this->_wtfTotal + $this->_ctTotal;
     }
 

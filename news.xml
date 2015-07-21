@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <news>
     <article>
+        <date>July 20, 2015</date>
+        <title>Flickr images have returned</title>
+        <body><![CDATA[
+        <p>
+            Images from Flickr are back in the game! At the moment, images
+            from the Words That Follow Flickr group will not appear,
+            but I am looking for a solution to this that will not cause the
+            repeated image problem we saw before.
+        </p>
+        ]]>
+        </body>
+    </article>
+    <article>
         <date>May 31, 2015</date>
         <title>Flickr images temporarily disabled</title>
         <body><![CDATA[
