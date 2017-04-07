@@ -7,7 +7,6 @@ require_once('bootstrap.php');
 
 $wtfConfig = Configuration::getInstance();
 $wtfGameState = GameState::getInstance();
-$wtfFeatured = FeaturedCaps::getInstance();
 
 define("MAX_NAME_LEN", 17);
 
@@ -22,8 +21,6 @@ if (isset($_COOKIE['player_name'])) {
 } else {
     $escapedPlayerName = "";
 }
-
-$featured = $wtfFeatured->getFeaturedCaption();
 
 $news = new News();
 
@@ -53,7 +50,6 @@ if (isset($_SESSION['login_error'])) {
             <meta name="Generator" content="Notepad++" />
             <meta name="author" content="Kenneth Shook" />
             <meta name="google-site-verification" content="UQdTbTgzSc1JCbikRZIp_q-93_Gr2mZhfNWFRs8HbUA" />
-            <script type="text/javascript" src="featured.js"></script>
     </head>
     <body<?php if ($use_facebook) echo ' class="fb"'; ?>>
         <div id="container">
@@ -70,31 +66,6 @@ if (isset($_SESSION['login_error'])) {
                     <p>You MUST have Javascript enabled to use this site.</p>
                     <p>Javascript is current DISABLED for your browser.</p>
                 </noscript>
-                <div id="sidebar">
-                    <div id="featured">
-                        <h3>Player Caption</h3>
-                        <?php
-                        if ($featured == false) {
-                            ?>
-                            <p>No caption yet</p>
-                            <?php
-                        } else {
-                            $fimg = $featured['image'];
-                            $fname = $featured['name'];
-                            $fcap = $featured['caption'];
-                            echo "<div><img src=\"./play/gameimages/$fimg\" alt=\"Featured caption\" style=\"display: none;\" onload=\"resize(this)\" /></div>\n";
-                            echo "<p>$fcap ($fname)</p>\n";
-                        }
-                        ?>
-                    </div>
-                    <div id="add_photos">
-                        <h3>Submit photos</h3>
-                        <p>You can now submit photos to the game if you have a Flickr account!
-                            Simply add your photos to the
-                            <a href="http://www.flickr.com/groups/wordsthatfollow/">Words That Follow group</a>.
-                        </p>
-                    </div>
-                </div>
                 <div id="play_now">
                     <h3>Play Now</h3>
                     <form method="POST" action="./play/login.php">
