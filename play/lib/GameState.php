@@ -395,7 +395,6 @@ class GameState
     public function updateState($rid)
     {
         $wtfChat = Chat::getInstance();
-        $wtfFeatured = FeaturedCaps::getInstance();
         $roomLock = RoomLock::getInstance();
         $wtfConfig = Configuration::getInstance();
         
@@ -469,7 +468,6 @@ class GameState
                     $room['state'] = "results";
                     $room['timedata'] = $this->getCurTimeData();
                     $this->updatePlayerScores($rid, $room['round']);
-                    $wtfFeatured->updateFeaturedCaptions($rid, $room['image']);
                     $this->updateRoom($rid, $room);
                     $wtfChat->writeChatFile($rid); // Update scores in the chat file for this room.
                     $roomLock->unlock($rid);
