@@ -78,7 +78,6 @@ a:hover {
 }
 
 #play_now {
-    margin-right: 260px;
     background-image: url("./play/orange.png");
     background-repeat: repeat-x;
     background-color: #ffe400;
@@ -93,44 +92,8 @@ a:hover {
 
 #game_desc, #recent_news {
     margin-top: 1em;
-    margin-right: 260px;
 }
 
-/* Side bar */
-#sidebar {
-    position: absolute;
-    top: 0px;
-    right: 10px;
-    width: 250px;
-}
-#sidebar #add_photos {
-    /*border: 2px outset #f0f0f0;*/
-    /*background-color: #d0d0d0;*/
-    background-image: url("./play/orange.png");
-    background-repeat: repeat-x;
-    background-color: #ffe400;
-    border: 1px outset #ff8a00;
-    margin-top: 5px;
-    padding: 1ex;
-}
-#sidebar #add_photos h3 {
-    margin: 0;
-    padding-bottom: 0;
-}
-/* Feature caption */
-#featured {
-    text-align: center;
-    border: 1px solid black;
-}
-#featured img {
-    border: 1px solid black;
-}
-#featured p {
-    font-style: italic;
-    margin-top: 0;
-    margin-left: 5px;
-    margin-right: 5px;
-}
 /* News */
 #recent_news h3 {
     margin-bottom: 10px;
