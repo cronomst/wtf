@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Words that Follow - Start a new game</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="../resources/css/common.css">
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <div id="summary" class="jumbotron">
+                <h1>Start a new game</h1>
+                <p>Choose the settings you wish to use for your game.</p>
+            </div>
+
+            <div id="newgame" class="jumbotron">
+                <form>
+                    <div class="form-group">
+                        <label>Your user name</label>
+                        <span class="help-block">Will be displayed to other players</span>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Room name</label>
+                        <span class="help-block">The name that will be displayed on the list of active games</span>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Room password</label>
+                        <span class="help-block">Optional. If left blank, anyone can join your game.</span>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Captioning time limit</label>
+                        <span class="help-block">The amount of time players have to type their caption. The less time there is, the harder the game will be.</span>
+                        <select class="form-control">
+                            <option>1 minute</option>
+                            <option>45 seconds</option>
+                            <option>30 seconds</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Keep it clean</label>
+                        <span class="help-block">Apply a basic profanity filter to captions and chat messages</span>
+                        <div class="checkbox form-control">
+                            <label>
+                                <input type="checkbox" value="clean">
+                                Use profanity filter
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <p><button class="btn btn-lg btn-success btn-block">Create</button></p>
+                        <p><a class="btn btn-danger btn-block" href="../">Cancel</a></p>
+                    </div>
+
+                </form>
+            </div>
+
+            <footer class="footer text-muted">
+                <p>&copy; 2017 Kenneth Shook</p>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
