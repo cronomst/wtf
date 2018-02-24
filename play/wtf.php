@@ -3,7 +3,9 @@
 session_start();
 require_once('../bootstrap.php');
 
-if (isset($_GET['action']))
+if (isset($_GET['action']) && isset($_GET['json']))
+    doGetAction($_GET['action'], 'json');
+elseif (isset($_GET['action']))
     doGetAction($_GET['action']);
 
 /**
@@ -11,7 +13,7 @@ if (isset($_GET['action']))
  * 
  * @param string $action 
  */
-function doGetAction($action) {
+function doGetAction($action, $format = 'xml') {
     $wtfGameState = GameState::getInstance();
     $requestFields = array_merge($_GET, $_SESSION);
     $wtfResponse = new WTFResponse();
@@ -27,6 +29,11 @@ function doGetAction($action) {
         $gameController->invokeAction($action);
     }
 
-    header("Content-Type: text/xml; charset=utf-8");
-    echo $wtfResponse->toXML();
+    if ($format === "json") {
+        header("Content-Type: application/json; charset=utf-8");
+        echo $wtfResponse->toJson();
+    } else {
+        header("Content-Type: text/xml; charset=utf-8");
+        echo $wtfResponse->toXML();
+    }
 }

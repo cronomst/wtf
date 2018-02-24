@@ -17,3 +17,33 @@ footer
 {
     border-top: 1px solid gray;
 }
+
+/* Game UI specific */
+.templates
+{
+    display: none;
+}
+
+.state-pregame, .state-intro
+{
+    
+}
+
+.state-get-caption
+{
+    
+}
+
+.state-get-vote
+{
+    
+}
+
+.state-round-results
+{
+    
+}
+.state-game-results
+{
+    
+}

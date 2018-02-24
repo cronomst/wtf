@@ -62,4 +62,9 @@ class WTFResponse
         return $xml;
     }
     
+    public function toJson()
+    {
+        return json_encode($this);
+    }
+    
 }
