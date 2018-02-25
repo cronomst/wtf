@@ -16,6 +16,8 @@
     </head>
     <body>
         <div class="container">
+            
+            <!-- Mobile view -->
             <div class="visible-xs-block">
                 <ul class="nav nav-pills">
                     <li class="active"><a href="#gametab" data-toggle="pill">Game</a></li>
@@ -32,6 +34,7 @@
                 </div>
             </div>
 
+            <!-- Larger view -->
             <div class="hidden-xs row">
                 <div class="game-scores pull-left col-sm-3">
                     <h3>Scores</h3>
@@ -41,7 +44,7 @@
                         <li class="list-group-item"><span>Blue</span><span class="pull-right">0</span></li>
                     </ul>
                 </div>
-                <div class="game-main">Game</div>
+                <div class="game-main col-sm-9">Game</div>
             </div>
         </div>
         <div class="templates">
@@ -60,15 +63,19 @@
                 </form>
             </div>
             <div class="template state-get-vote">
-                <ul>
-                    
-                </ul>
+                <ul class="list-group"></ul>
             </div>
             <div class="template state-round-results">
-                Round results go here.
+                <div class="list-group results-list"></div>
             </div>
             <div class="template state-game-results">
                 Game results go here.
+            </div>
+            
+            <div class="template results-item list-group-item row">
+                <h4 class="list-group-item-heading player-name"></h4>
+                <span class="col-xs-1 votes"></span>
+                <span class="col-xs-11 caption"></span>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

@@ -1,8 +1,13 @@
 var Game = function ()
 {
     this.baseUrl = "../play/wtf.php";
+    this.logging = false;
+    // == START DEBUG ==
+    //this.baseUrl = "state-results.json";
+    // == END DEBUG ==
     this.currentState = "";
     this.imagePath = "http://wordsthatfollow.com/play/gameimages/";
+    
 
     this.init = function ()
     {
@@ -21,7 +26,7 @@ var Game = function ()
     this.requestState = function ()
     {
         var thisGame = this;
-        $.getJSON(this.baseUrl + "?json&action=getState")
+        $.getJSON(this.baseUrl, {json:"", action:"getState"})
                 .done(function (response) {
                     thisGame.parseStateResponse(response);
                     thisGame.scheduleStateRequest(response["state"]["checkback"]);
@@ -54,7 +59,7 @@ var Game = function ()
 
     this.parseStateResponse = function (stateResponse)
     {
-        //console.log(JSON.stringify(stateResponse));
+        this.log(JSON.stringify(stateResponse));
         var stateMap = {
             "pregame": "pregame",
             "intro": "intro",
@@ -119,7 +124,6 @@ var Game = function ()
         this.updateGamePhoto(stateResponse);
         
         $(".template.state-get-vote ul").empty();
-        // TODO: Build caption list
         stateResponse.state.captionList.forEach(function(captionItem) {
             var listItem = $("<li></li>").text(captionItem.caption);
             $(".template.state-get-vote ul").append(listItem);
@@ -132,12 +136,18 @@ var Game = function ()
     
     this.setStateRoundResults = function(stateResponse)
     {
+        var thisGame = this;
         this.updateGamePhoto(stateResponse);
+        $(".template.state-round-results .results-list").empty();
+        stateResponse.state.resultList.forEach(function(resultItem) {
+            var listItem = thisGame.createCaptionResultItem(resultItem.playerName, resultItem.caption, resultItem.votes);
+            $(".template.state-round-results .results-list").append(listItem);
+        });
         
         $(".template.state-round-results").clone()
                 .removeClass("template")
                 .appendTo(".game-main");
-    }
+    };
 
     this.getImageURL = function(image) {
         if (image.match(/^flickr:/))
@@ -152,6 +162,26 @@ var Game = function ()
         image.src = this.getImageURL(stateResponse["state"]["image"]);
         $(".game-photo").empty().append("<img>");
         $(".game-photo img").attr("src", image.src);
+    };
+    
+    this.createCaptionResultItem = function(playerName, caption, score)
+    {
+        var result = $(".template.results-item").clone()
+                .removeClass("template");
+        
+        $(".player-name", result).text(playerName);
+        $(".votes", result).text(score);
+        $(".caption", result).text(caption);
+        
+        return result;
+        
+    };
+    
+    this.log = function(msg)
+    {
+        if (this.logging) {
+            console.log(msg);
+        }
     };
 };
 
