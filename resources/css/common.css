@@ -47,3 +47,14 @@ footer
 {
     
 }
+
+.disqualified .caption
+{
+    text-decoration: line-through;
+}
+
+.disqualified .player-name:after
+{
+    content: " disqualified for not voting";
+    color: red;
+}

@@ -3,7 +3,7 @@ var Game = function ()
     this.baseUrl = "../play/wtf.php";
     this.logging = false;
     // == START DEBUG ==
-    //this.baseUrl = "state-results.json";
+    this.baseUrl = "state-results.json";
     // == END DEBUG ==
     this.currentState = "";
     this.imagePath = "http://wordsthatfollow.com/play/gameimages/";
@@ -140,7 +140,10 @@ var Game = function ()
         this.updateGamePhoto(stateResponse);
         $(".template.state-round-results .results-list").empty();
         stateResponse.state.resultList.forEach(function(resultItem) {
-            var listItem = thisGame.createCaptionResultItem(resultItem.playerName, resultItem.caption, resultItem.votes);
+            var listItem = thisGame.createCaptionResultItem(resultItem.playerName,
+                    resultItem.caption,
+                    resultItem.votes,
+                    resultItem.disqualified);
             $(".template.state-round-results .results-list").append(listItem);
         });
         
@@ -164,11 +167,13 @@ var Game = function ()
         $(".game-photo img").attr("src", image.src);
     };
     
-    this.createCaptionResultItem = function(playerName, caption, score)
+    this.createCaptionResultItem = function(playerName, caption, score, disqualified)
     {
         var result = $(".template.results-item").clone()
                 .removeClass("template");
-        
+        if (disqualified) {
+            result.addClass("disqualified");
+        }
         $(".player-name", result).text(playerName);
         $(".votes", result).text(score);
         $(".caption", result).text(caption);
