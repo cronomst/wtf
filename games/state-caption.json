@@ -1,0 +1,17 @@
+{
+    "state": {
+        "type": "caption",
+        "image": "flickr:http://farm3.static.flickr.com/2439/3536178319_702f3affc0.jpg",
+        "nextImage": "flickr:http://farm3.static.flickr.com/2387/2436814131_0dcea1c90d.jpg",
+        "round": "1",
+        "rule": null,
+        "checkback": 10000,
+        "timer": 10000,
+        "captionList": null,
+        "resultList": null,
+        "winners": null
+    },
+    "response": null,
+    "chat": null,
+    "error": null
+}

@@ -1,0 +1,41 @@
+[{
+        "state": {
+            "type": "vote",
+            "image": "flickr:http://farm3.static.flickr.com/2439/3536178319_702f3affc0.jpg",
+            "nextImage": "flickr:http://farm3.static.flickr.com/2387/2436814131_0dcea1c90d.jpg",
+            "round": "1",
+            "rule": null,
+            "checkback": 8311,
+            "timer": 8311,
+            "captionList": [{
+                    "playerId": "3579",
+                    "caption": "Phone"
+                }, {
+                    "playerId": "3577",
+                    "caption": "pc"
+                }],
+            "resultList": null,
+            "winners": null
+        },
+        "response": null,
+        "chat": null,
+        "error": null
+    },
+    {
+        "state": {
+            "type": "caption",
+            "image": "flickr:http://farm4.static.flickr.com/3235/2684511665_ee3745b693.jpg",
+            "nextImage": "flickr:http://farm2.static.flickr.com/1096/878419900_0d3b4f1757.jpg",
+            "round": "7",
+            "rule": "Write something a Miami detective might say just before putting on his sunglasses. (YEEAAHH!)",
+            "checkback": "30000",
+            "timer": 69956,
+            "captionList": null,
+            "resultList": null,
+            "winners": null
+        },
+        "response": null,
+        "chat": null,
+        "error": null
+    }
+]

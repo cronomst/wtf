@@ -29,9 +29,9 @@ footer
     
 }
 
-.state-get-caption
+.state-get-caption input
 {
-    
+    font-size: x-large;
 }
 
 .state-get-vote
@@ -46,6 +46,12 @@ footer
 .state-game-results
 {
     
+}
+
+.game-photo
+{
+    text-align: center;
+    padding-bottom: 1em;
 }
 
 .disqualified .caption

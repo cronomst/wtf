@@ -3,7 +3,8 @@ var Game = function ()
     this.baseUrl = "../play/wtf.php";
     this.logging = false;
     // == START DEBUG ==
-    this.baseUrl = "state-results.json";
+    this.baseUrl = "state-caption.json";
+    this.logging = true;
     // == END DEBUG ==
     this.currentState = "";
     this.imagePath = "http://wordsthatfollow.com/play/gameimages/";
@@ -32,7 +33,7 @@ var Game = function ()
                     thisGame.scheduleStateRequest(response["state"]["checkback"]);
                 })
                 .fail(function () {
-                    console.log("Failed to get state.");
+                    this.log("Failed to get state.");
                     thisGame.scheduleStateRequest(5000);
                 });
     };
@@ -44,7 +45,19 @@ var Game = function ()
 
     this.postCaption = function (caption)
     {
-
+        this.log("Posting caption: [" + caption + "]");
+        var thisGame = this;
+//        $.getJSON(this.baseUrl, {json:"", action:"setCaption", caption: caption})
+//                .done(function (response) {
+//                    if (response.response === "caption_ok") {
+//                        this.log("Caption set successfully.");
+//                    } else {
+//                        this.log("Caption was not set. " + response);
+//                    }
+//                })
+//                .fail(function () {
+//                    this.log("Failed to set caption.");
+//                });
     };
 
     this.postVote = function (voteId)
@@ -113,10 +126,20 @@ var Game = function ()
     this.setStateGetCaption = function (stateResponse)
     {
         this.updateGamePhoto(stateResponse);
+        var thisGame = this;
         
         $(".template.state-get-caption").clone()
                 .removeClass("template")
                 .appendTo(".game-main");
+        
+        var submitFunction = function() {
+            thisGame.postCaption($(".game-main input").val());
+        }
+        $(".game-main form").submit(function(event){
+            submitFunction();
+            event.preventDefault();
+        })
+        $(".game-main button").click(submitFunction);
     };
     
     this.setStateGetVote = function(stateResponse)

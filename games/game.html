@@ -16,9 +16,8 @@
     </head>
     <body>
         <div class="container">
-            
             <!-- Mobile view -->
-            <div class="visible-xs-block">
+<!--            <div class="visible-xs-block">
                 <ul class="nav nav-pills">
                     <li class="active"><a href="#gametab" data-toggle="pill">Game</a></li>
                     <li><a href="#scorestab" data-toggle="pill">Scores</a></li>
@@ -32,19 +31,19 @@
                         <div class="game-scores">[Scores]</div>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <!-- Larger view -->
-            <div class="hidden-xs row">
-                <div class="game-scores pull-left col-sm-3">
+            <div class="row">
+<!--                <div class="hidden-xs game-scores pull-left col-sm-3">
                     <h3>Scores</h3>
                     <ul class="list-group">
                         <li class="list-group-item"><span>Kenneth</span><span class="pull-right">10</span></li>
                         <li class="list-group-item"><span>Lauren</span><span class="pull-right">10</span></li>
                         <li class="list-group-item"><span>Blue</span><span class="pull-right">0</span></li>
                     </ul>
-                </div>
-                <div class="game-main col-sm-9">Game</div>
+                </div>-->
+                <div class="game-main col-xs-12">Game</div>
             </div>
         </div>
         <div class="templates">
@@ -55,11 +54,12 @@
                 <h1>Round 0</h1>
             </div>
             <div class="template state-get-caption">
-                <div class="game-photo"></div>
                 <form>
-                    <label>Enter a caption for this photo</label>
-                    <input type="text">
-                    <button>Submit</button>
+                    <div class="game-photo"></div>
+                    <div class="row">
+                        <input class="col-sm-11 col-xs-12" type="text" placeholder="Enter a caption for this photo">
+                        <button class="btn btn-primary col-sm-1 col-xs-12" type="button">Submit</button>
+                    </div>
                 </form>
             </div>
             <div class="template state-get-vote">
