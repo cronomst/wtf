@@ -130,10 +130,6 @@ class GameController
 
         $msg = Util::urldecodeUTF8($this->getField('msg'));
 
-        if (get_magic_quotes_gpc()) {
-            $playerName = stripslashes($playerName);
-            $msg = stripslashes($msg);
-        }
         if ($room['clean'])
             $msg = $wtfChat->filterLanguage($msg);
 
@@ -186,9 +182,6 @@ class GameController
         $room = $wtfGameState->getRoom($roomId);
         if ($room['state'] == "caption" || $room['state'] == "caption_wait") {
             $player['caption'] = Util::urldecodeUTF8($caption);
-
-            if (get_magic_quotes_gpc())
-                $player['caption'] = stripslashes($player['caption']);
 
             if ($room['clean'])
                 $player['caption'] = $wtfChat->filterLanguage($player['caption']);

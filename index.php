@@ -16,8 +16,6 @@ $pname = '';
 if (isset($_COOKIE['player_name'])) {
     $pname = $_COOKIE['player_name'];
     $escapedPlayerName = htmlspecialchars($pname, ENT_QUOTES, 'UTF-8');
-    if (get_magic_quotes_gpc())
-            $escapedPlayerName = stripslashes($escapedPlayerName);
 } else {
     $escapedPlayerName = "";
 }

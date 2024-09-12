@@ -8,8 +8,6 @@ define('MAX_NAME_LEN', 17);
 
 if (isset($_POST['pname'])) {
     $pname = trim(Util::urldecodeUTF8($_POST['pname']));
-    if (get_magic_quotes_gpc())
-        $pname = stripslashes($pname);
     $fpname = htmlspecialchars($pname);
     $error = false;
     // TODO: Check for duplicate names so that someone can't use the name as another current player

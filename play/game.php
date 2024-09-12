@@ -76,8 +76,6 @@ if (isset($_GET['gid'])) {
     // Create a new game
     if (isset($_POST['gname'])) {
         $rname = $_POST['gname'];
-        if (get_magic_quotes_gpc())
-            $rname = stripslashes($rname);
 
         // Any special room name validation should go here
         $rname = htmlspecialchars($rname);
